@@ -10,6 +10,25 @@ package gcom.modules.group;
  */
 public class ElectionMessage {
 
-    private Member from;
+    private Member sender;
     private Member currentLeader;
+    private int maxIdentifier;
+
+    public ElectionMessage(Member sender) {
+        this.sender = sender;
+    }
+
+    /**
+     * @return the currentLeader
+     */
+    public Member getCurrentLeader() {
+        return currentLeader;
+    }
+
+    /**
+     * @param currentLeader the currentLeader to set
+     */
+    public void setCurrentLeader(Member currentLeader) {
+        this.currentLeader = currentLeader;
+    }
 }

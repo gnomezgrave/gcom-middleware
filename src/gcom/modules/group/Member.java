@@ -29,6 +29,8 @@ public class Member implements Remote {
     }
 
     public void callElection() {
+        parentGroup.initiateElection(this);
+        ElectionMessage em = new ElectionMessage(this);
     }
 
     public void vote() {
@@ -77,5 +79,19 @@ public class Member implements Remote {
      */
     public void setIdentifier(int identifier) {
         this.identifier = identifier;
+    }
+
+    /**
+     * @return the isElectionParticipant
+     */
+    public boolean isIsElectionParticipant() {
+        return isElectionParticipant;
+    }
+
+    /**
+     * @param isElectionParticipant the isElectionParticipant to set
+     */
+    public void setIsElectionParticipant(boolean isElectionParticipant) {
+        this.isElectionParticipant = isElectionParticipant;
     }
 }
