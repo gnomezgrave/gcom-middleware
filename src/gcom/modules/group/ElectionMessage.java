@@ -11,4 +11,5 @@ package gcom.modules.group;
 public class ElectionMessage {
 
     private Member from;
+    private Member currentLeader;
 }
