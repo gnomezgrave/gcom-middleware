@@ -25,10 +25,16 @@ public class Member implements Remote {
     }
 
     public Member() {
+        this(null);
     }
 
     public void callElection() {
+    }
 
+    public void vote() {
+    }
+
+    public void start() {
     }
 
     /**
@@ -71,8 +77,5 @@ public class Member implements Remote {
      */
     public void setIdentifier(int identifier) {
         this.identifier = identifier;
-    }
-
-    public void start() {
     }
 }
