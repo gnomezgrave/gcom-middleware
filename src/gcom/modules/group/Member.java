@@ -5,6 +5,7 @@
 package gcom.modules.group;
 
 import java.rmi.Remote;
+import java.util.HashMap;
 import java.util.Random;
 
 /**
@@ -18,6 +19,7 @@ public class Member implements Remote {
     private Group parentGroup;
     private boolean isElectionParticipant = false;
     private boolean isGroupLeader = false;
+    private HashMap<String, Member> members;
 
     public Member(Group parent) {
         this.parentGroup = parent;
